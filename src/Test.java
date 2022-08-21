@@ -127,6 +127,24 @@ public class Test {
         Arrays.sort(array);
     }
     
+    public void median() {
+        Arrays.sort(array);
+        
+        if(array.length % 2 == 0) {
+            int mid = array.length / 2;
+            
+            double total = array[mid] + array[mid+1];
+            total /= 2;
+            System.out.println(total);
+        } else {
+            int mid = array.length / 2;
+            
+            double total = array[mid];
+            total /= 2;
+            System.out.println(total);
+        }
+    }
+    
     public static void main(String [] args) {
         
         final int SIZE = 30; 
@@ -197,5 +215,6 @@ public class Test {
             }
         }
         
+        object.median();
     }
 }
